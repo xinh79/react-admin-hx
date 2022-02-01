@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
-import { Form, Icon, Input, Button, message, Spin } from "antd";
+import { Navigate } from "react-router-dom";
+import { Form, Input, Button, message, Spin } from "antd";
+import { Icon } from "ant-design/icons";
 import { connect } from "react-redux";
 import DocumentTitle from "react-document-title";
 import "./index.less";
-import { login, getUserInfo } from "@/store/actions";
+import { login, getUserInfo } from "../../store/actions";
 
 const Login = (props) => {
   const { form, token, login, getUserInfo } = props;
@@ -52,7 +53,7 @@ const Login = (props) => {
   };
 
   if (token) {
-    return <Redirect to="/dashboard" />;
+    return <Navigate to="/dashboard" />;
   }
   return (
     <DocumentTitle title={"用户登录"}>

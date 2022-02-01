@@ -1,9 +1,9 @@
 import React from "react";
-import TypingCard from "@/components/TypingCard";
-import wechat from "@/assets/images/wechat.jpg";
-import reward from "@/assets/images/reward.jpg";
+import TypingCard from "../components/TypingCard";
+import wechat from "../assets/images/wechat.jpg";
+import reward from "../assets/images/reward.jpg";
 const About = () => {
-  const cardContent = `
+	const cardContent = `
     <p>大家好，我是难凉热血。</p>
     <p>终南山下码农一枚，师从道长王重阳，酷爱打码，崇尚开源精神，乐于分享。</p>
     <p>2005年服役于中国人民解放军东南战区狼牙特种大队，担任狙击手。</p>
@@ -19,11 +19,11 @@ const About = () => {
     <img src="${wechat}" alt="wechat" style="height:550px"/>
     <img src="${reward}" alt="reward" style="height:550px"/>
   `;
-  return (
-    <div className="app-container">
-      <TypingCard title="关于作者" source={cardContent} />
-    </div>
-  );
+	return (
+		<div className="app-container">
+			<TypingCard title="关于作者" source={cardContent} />
+		</div>
+	);
 };
 
 export default About;
